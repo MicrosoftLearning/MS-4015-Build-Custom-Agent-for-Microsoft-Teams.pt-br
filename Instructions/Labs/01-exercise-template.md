@@ -1,6 +1,5 @@
----
-lab:
-  title: Criar um Agente personalizado
+
+lab: 'Create a Custom Agent'
 ---
 <!--
 Edit the metadata above to manage the list of exercises in the home page of the GitHub site that gets generated.
@@ -48,7 +47,7 @@ Selecione **Avançar**.
 
 ## Tarefa 2: Implementar o RAG para o modelo OpenAI do Azure
 
-Agora vamos...
+Nesta tarefa, você aprenderá a implementar o RAG usando uma fonte de dados para seu próprio ambiente de teste.
 
 1. Na página do recurso OpenAI do Azure criado recentemente, clique em **Ir para o Azure OpenAI Studio** na faixa de opções na parte superior da página.
 2. Na nova página intitulada **Bem-vindo ao serviço OpenAI do Azure**, clique em **Chat** no menu de navegação à esquerda da tela.
@@ -78,7 +77,7 @@ Agora vamos...
 
  ## Tarefa 3: Criar e testar o agente personalizado na Ferramenta de Teste e no Teams
 
-Agora vamos...
+Nesta tarefa, você criará o agente personalizado e testará o agente.
 
 1. Abra o **Visual Studio Code**.
 2. No lado direito da janela do Visual Studio Code, selecione o ícone do **Kit de Ferramentas do Teams** > selecione **Criar um novo app** > no menu suspenso, selecione **Agente de mecanismo personalizado** (observação: dependendo da versão do Kit de Ferramentas do Teams, talvez você precise selecionar **Copilot personalizado**) > **Chatbot de IA básico** > **JavaScript** > **OpenAI do Azure**.
@@ -96,13 +95,25 @@ Agora vamos...
 
    f. Na nova janela do VS Code do aplicativo recentemente criado nas etapas a-f acima, navegue até o ícone do **Kit de Ferramentas do Teams** no lado esquerdo da tela.
 
+   **Observação:** as etapas g-i devem ser concluídas para o ambiente de um usuário que não tem acesso de administrador ao Centro de Administração do Microsoft Teams. Se os usuários tiverem um locatário do M365 com acesso de administrador, execute as etapas j-m.
+
    g. Na seção **Contas**, clique em **Entrar no Microsoft 365**. Uma nova janela será aberta no navegador. Faça logon usando as credenciais fornecidas.
 
    .h Navegue de volta para a página do VS Code do seu aplicativo. Agora você deve ver uma marca de seleção verde ao lado das palavras **Upload de aplicativo personalizado ativado** em **Contas.
 
    i. Na seção **Contas**, clique em **Entrar no Azure**. Clique em **OK** em todas as janelas pop-up. Uma nova janela será aberta no navegador. Faça logon usando as credenciais fornecidas.
+
+   Para usuários que têm um locatário do M365 com acesso de administrador ao Centro de Administração do Microsoft Teams, execute as seguintes etapas em vez das etapas g-i acima:
+
+   j. Entre no https://admin.teams.microsoft.com com suas credenciais de administrador.
+
+   k. Acesse **aplicativos do Teams**  na barra lateral e selecione **Configurar políticas**.
+
+   l. Selecione a política  **Global (padrão em toda a organização)**  e, em seguida, ative a opção  **Upload de aplicativos personalizados** .
+
+   m. Role para baixo e clique no botão **Salvar** para salvar as alterações. Seu locatário agora permitiá o sideload de aplicativos personalizados. 
    
-4. Navegue até **src/prompts/chat/skprompt.txt** na janela VS Code do seu aplicativo. Exclua qualquer texto no arquivo e cole o seguinte: "A seguir está uma conversa com um assistente de IA, que é especialista em responder a perguntas sobre o contexto fornecido. 
+5. Navegue até **src/prompts/chat/skprompt.txt** na janela VS Code do seu aplicativo. Exclua qualquer texto no arquivo e cole o seguinte: "A seguir está uma conversa com um assistente de IA, que é especialista em responder a perguntas sobre o contexto fornecido. 
 
 As respostas devem ser em um estilo jornalístico curto, com no máximo 80 palavras." 
 
