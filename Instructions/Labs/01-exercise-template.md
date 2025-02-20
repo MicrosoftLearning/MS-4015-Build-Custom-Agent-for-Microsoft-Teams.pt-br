@@ -11,9 +11,11 @@ To enable GitHub page publishing, edit the Page settings for the repo and publis
 
 Neste exercício, você criará um recurso OpenAI do Azure que serve como base para criar o agente personalizado.
 
-Este exercício deve levar aproximadamente **30** minutos para ser concluído. <!-- update with estimated duration -->
+Este exercício deve levar aproximadamente **60** minutos para ser concluído. <!-- update with estimated duration -->
 
-**Observação:** espera-se que os alunos concluam este laboratório em seus próprios ambientes.
+**Observação:** os alunos podem concluir este laboratório com estas opções
+1) O ambiente de laboratório Skillable
+2) Espera-se que os alunos concluam este laboratório em seus próprios ambientes para todos os outros ALHs.
 
 ##  Tarefa 1: criar um recurso OpenAI do Azure 
 
@@ -24,7 +26,9 @@ Primeiro, você precisa...
 2. No canto superior esquerdo da tela, clique em **+ Criar um recurso**.
 1. Na caixa de pesquisa, digite **openai do azure** e pressione Enter.
 1. Um resultado chamado **OpenAI do Azure** deve aparecer como uma opção. No canto inferior esquerdo desta opção há um botão denominado **Criar**. Pressione> **Criar** > **Azure OpenAI**.
-1. Na página **Criar OpenAI do Azure**, defina os seguintes campos: **Observação:** como este laboratório deve ser concluído no próprio ambiente do aluno, os alunos terão que usar seu próprio critério ao selecionar valores para os campos **Assinatura**, **Tipo de preço** e **Grupo de recursos**.
+1. Na página **Criar OpenAI do Azure**, defina os seguintes campos:
+
+**Observação:** os alunos usando o próprio ambiente deles terão que usar seu próprio critério ao selecionar valores para os campos **Assinatura**, **Tipo de preço** e **Grupo de recursos**. Para alunos que usam o ambiente de laboratório Skillable, selecione os valores padrão para os campos nas etapas a-d abaixo.
    
    a. **Assinatura** Use seu próprio critério ao preencher este campo.
    
@@ -56,16 +60,18 @@ Nesta tarefa, você aprenderá a implementar o RAG usando uma fonte de dados par
 5. Na página **Playground do Chat**, selecione **Adicionar seus dados** localizado próximo à parte inferior da tela > **+ Adicionar uma fonte de dados**.
 6. Na janela **Selecionar ou adicionar fonte de dados**, selecione o menu suspenso para **Selecionar fonte de dados** e selecione **Upload de arquivos (versão prévia)**.
 7. Na próxima página de **Fonte de dados**, verifique se a lista suspensa de **Selecionar fonte de dados** está definida como **Carregar arquivos (visualização)**
-   
+
+**Observações:** no caso de alunos usando o próprio ambiente, os usuários talvez tenham que usar seu próprio critério ao preencher os campos das etapas a-c abaixo. No caso de alunos que usam o ambiente Skillable, siga os valores padrão conforme instruído nas etapas a-b abaixo. 
+  
    a. No campo **Assinatura**, verifique se o valor padrão está selecionado.
    
-    b. No campo **Selecionar recurso de Armazenamento de Blobs do Azure**, selecione **Criar um novo recurso de Armazenamento de Blobs do Azure** > na nova janela intitulada **Criar uma conta de armazenamento**, na guia **Básico**, verifique se os campos **Assinatura** e **Grupo de recursos** estão definidos com os valores padrão. Escolha o único valor disponível para **Grupo de recursos**. Em **Detalhes da instância**, defina um **nome para a conta de armazenamento**. Deixe o restante dos campos como estão. Selecione **Examinar + criar**. Na guia **Examinar + criar**, selecione o botão **Criar**. O recurso de Armazenamento de Blobs do Azure levará um momento para ser implantado.
+   b. No campo **Selecionar recurso de Armazenamento de Blobs do Azure**, selecione **Criar um novo recurso de Armazenamento de Blobs do Azure** > na nova janela intitulada **Criar uma conta de armazenamento**. Na guia **Básico**, verifique se os campos **Assinatura** e **Grupo de recursos** estão definidos com os valores padrão. Escolha o único valor disponível para **Grupo de recursos**. Em **Detalhes da instância**, defina um **nome para a conta de armazenamento**. Deixe o restante dos campos como estão. Selecione **Examinar + criar**. Na guia **Examinar + criar**, selecione o botão **Criar**. O recurso de Armazenamento de Blobs do Azure levará um momento para ser implantado.
    
    c. Navegue de volta para a janela do **Playground do Chat**. Selecione o botão de atualização ao lado do campo **Selecionar recurso de Armazenamento de Blobs do Azure** > selecione o recurso que você criou na etapa b acima. Selecione o botão **Ativar CORS**.
    
 8. Para o campo **Selecine o recurso da Pesquisa de IA do Azure**, selecione **Criar um novo recurso da Pesquisa de IA do Azure**.  Verifique se os campos **Assinatura** e **Grupo de recursos** estão definidos com os valores de sua escolha.
 
-   **Observação:** como este laboratório deve ser concluído no próprio ambiente do aluno, os alunos terão que usar seu próprio critério ao selecionar valores para os campos **Assinatura** e **Grupo de recursos**.
+   **Observação:** no caso de alunos usando o próprio ambiente deles, use seu próprio critério ao selecionar valores para os campos **Assinatura** e **Grupo de recursos**.
 
 9. Clique no valor suspenso de **Grupo de recursos** para selecionar a opção de sua escolha. Insira um **Nome de serviço**> Garanta que todos os outros campos estejam definidos com os valores padrão > selecione **Examinar + criar** > **Criar**. O recurso da Pesquisa de IA do Azure levará um momento para ser implantado.
 10. Navegue de volta para a janela do **Playground do Chat**. Selecione o botão de atualização ao lado do campo **Selecionar recurso de Armazenamento de Blobs do Azure** > selecione o recurso que você criou na etapa 9 acima.
@@ -94,11 +100,12 @@ Nesta tarefa, você criará o agente personalizado e testará o agente.
 
    d. Em **Escolha a pasta onde a pasta raiz do projeto estará localizada**, selecione **Pasta padrão**.
 
-   e. Em **Insira o nome do aplicativo**, digite qualquer nome > **Enter**> na janela pop-up, selecione **Sim, confio nos autores**.
+   e. Em **Inserir nome do aplicativo**, digite qualquer nome > **Enter**> na janela pop-up, selecione **Sim, confio nos autores**.
 
    f. Na nova janela do VS Code do aplicativo recentemente criado nas etapas a-f acima, navegue até o ícone do **Kit de Ferramentas do Teams** no lado esquerdo da tela.
 
-   **Observação:** as etapas g-i devem ser concluídas para o ambiente de um usuário que não tem acesso de administrador ao Centro de Administração do Microsoft Teams. Se os usuários tiverem um locatário do M365 com acesso de administrador, execute as etapas j-m.
+   **Observação:** as etapas g-i devem ser concluídas para o ambiente de um usuário que não tem acesso de administrador ao Centro de Administração do Microsoft Teams e/ou para alunos que usam o ambiente Skillable.
+  Para alunos com seus próprios ambientes, execute as etapas j-m.
 
    g. Na seção **Contas**, clique em **Entrar no Microsoft 365**. Uma nova janela será aberta no navegador. Faça logon usando as credenciais fornecidas.
 
@@ -106,7 +113,7 @@ Nesta tarefa, você criará o agente personalizado e testará o agente.
 
    i. Na seção **Contas**, clique em **Entrar no Azure**. Clique em **OK** em todas as janelas pop-up. Uma nova janela será aberta no navegador. Faça logon usando as credenciais fornecidas.
 
-   Para usuários que têm um locatário do M365 com acesso de administrador ao Centro de Administração do Microsoft Teams, execute as seguintes etapas em vez das etapas g-i acima:
+   Para usuários que têm uma licença de locatário do M365 com acesso de administrador ao Centro de Administração do Microsoft Teams, execute as seguintes etapas em vez das etapas g-i acima:
 
    j. Entre no https://admin.teams.microsoft.com com suas credenciais de administrador.
 
@@ -116,7 +123,7 @@ Nesta tarefa, você criará o agente personalizado e testará o agente.
 
    m. Role para baixo e clique no botão **Salvar** para salvar as alterações. Seu locatário agora permitiá o sideload de aplicativos personalizados. 
    
-5. Navegue até **src/prompts/chat/skprompt.txt** na janela VS Code do seu aplicativo. Exclua qualquer texto no arquivo e cole o seguinte: "A seguir está uma conversa com um assistente de IA, que é especialista em responder a perguntas sobre o contexto fornecido. 
+4. Navegue até **src/prompts/chat/skprompt.txt** na janela VS Code do seu aplicativo. Exclua qualquer texto no arquivo e cole o seguinte: "A seguir está uma conversa com um assistente de IA, que é especialista em responder a perguntas sobre o contexto fornecido. 
 
 As respostas devem ser em um estilo jornalístico curto, com no máximo 80 palavras." 
 
@@ -159,9 +166,12 @@ As respostas devem ser em um estilo jornalístico curto, com no máximo 80 palav
 13. Uma nova janela será aberta no navegador Edge. Será solicitado que você entre. Use as informações de login fornecidas para entrar. Depois de conseguir entrar, feche a janela.
 14. Repita a etapa 11 novamente. Deve haver uma janela com o título do seu aplicativo recém-criado. Selecione **Adicionar** > **Abrir**.
 15. Parabéns! Agora você pode fazer qualquer pergunta ao agente contendo os arquivos de dados RAG.
-16. **Observação:** como esse agente foi criado para fins educacionais usando a sua própria assinatura, os usuários devem prosseguir com a exclusão do agente após a conclusão deste laboratório. Para excluir um agente personalizado no Microsoft Teams:
+16. **Observação:** para os alunos fazendo este laboratório em seu próprio ambiente, esse agente foi criado para fins educacionais usando a sua própria assinatura; os usuários devem prosseguir com a exclusão do agente após a conclusão deste laboratório. Para excluir um agente personalizado no Microsoft Teams:
 - Selecione o agente que você quer excluir, clique no **ícone Mais opções (...)** e escolha **Excluir**.
 - Remova o agente de um chat selecionando as reticências no thread e escolhendo **Gerenciar aplicativos**.
-- Na experiência de criação de um agente, selecione as **reticências (...)** e escolha **Excluir**.
+- Na experiência de criação de um agente, selecione as **reticências (...)** e escolha **Excluir**.- Na experiência de criação de um agente, selecione as **reticências (...)** e escolha **Excluir**.
+
+**FIM DO LABORATÓRIO**
+
 
 **FIM DO LABORATÓRIO**
