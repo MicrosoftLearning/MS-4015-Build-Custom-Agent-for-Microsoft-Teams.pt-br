@@ -14,7 +14,7 @@ Neste exercício, você criará um recurso OpenAI do Azure que serve como base p
 Este exercício deve levar aproximadamente **60** minutos para ser concluído. <!-- update with estimated duration -->
 
 **Observação:** os alunos podem concluir este laboratório com estas opções
-1) O ambiente de laboratório Skillable
+1) Um ambiente de laboratório fornecido para os alunos.
 2) Espera-se que os alunos concluam este laboratório em seus próprios ambientes para todos os outros ALHs.
 
 ##  Tarefa 1: criar um recurso OpenAI do Azure 
@@ -28,7 +28,7 @@ Primeiro, você precisa...
 1. Um resultado chamado **OpenAI do Azure** deve aparecer como uma opção. No canto inferior esquerdo desta opção há um botão denominado **Criar**. Pressione> **Criar** > **Azure OpenAI**.
 1. Na página **Criar OpenAI do Azure**, defina os seguintes campos:
 
-**Observação:** os alunos usando o próprio ambiente deles terão que usar seu próprio critério ao selecionar valores para os campos **Assinatura**, **Tipo de preço** e **Grupo de recursos**. Para alunos que usam o ambiente de laboratório Skillable, selecione os valores padrão para os campos nas etapas a-d abaixo.
+**Observação:** os alunos usando o próprio ambiente deles terão que usar seu próprio critério ao selecionar valores para os campos **Assinatura**, **Tipo de preço** e **Grupo de recursos**. Para alunos que estiverem usando o ambiente de laboratório, selecione os valores padrão para os campos nas etapas a-d abaixo.
    
    a. **Assinatura** Use seu próprio critério ao preencher este campo.
    
@@ -61,7 +61,7 @@ Nesta tarefa, você aprenderá a implementar o RAG usando uma fonte de dados par
 6. Na janela **Selecionar ou adicionar fonte de dados**, selecione o menu suspenso para **Selecionar fonte de dados** e selecione **Upload de arquivos (versão prévia)**.
 7. Na próxima página de **Fonte de dados**, verifique se a lista suspensa de **Selecionar fonte de dados** está definida como **Carregar arquivos (visualização)**
 
-**Observações:** no caso de alunos usando o próprio ambiente, os usuários talvez tenham que usar seu próprio critério ao preencher os campos das etapas a-c abaixo. No caso de alunos que usam o ambiente Skillable, siga os valores padrão conforme instruído nas etapas a-b abaixo. 
+**Observações:** no caso de alunos usando o próprio ambiente, os usuários talvez tenham que usar seu próprio critério ao preencher os campos das etapas a-c abaixo. No caso de alunos que usarem o ambiente de laboratório fornecido, siga os valores padrão conforme instruído nas etapas a-b abaixo. 
   
    a. No campo **Assinatura**, verifique se o valor padrão está selecionado.
    
@@ -104,7 +104,7 @@ Nesta tarefa, você criará o agente personalizado e testará o agente.
 
    f. Na nova janela do VS Code do aplicativo recentemente criado nas etapas a-f acima, navegue até o ícone do **Kit de Ferramentas do Teams** no lado esquerdo da tela.
 
-   **Observação:** as etapas g-i devem ser concluídas para o ambiente de um usuário que não tem acesso de administrador ao Centro de Administração do Microsoft Teams e/ou para alunos que usam o ambiente Skillable.
+   **Observação:** as etapas g-i devem ser concluídas para o ambiente de um usuário que não tem acesso de administrador ao Centro de Administração do Microsoft Teams e/ou para alunos que usarem o ambiente de laboratório fornecido.
   Para alunos com seus próprios ambientes, execute as etapas j-m.
 
    g. Na seção **Contas**, clique em **Entrar no Microsoft 365**. Uma nova janela será aberta no navegador. Faça logon usando as credenciais fornecidas.
